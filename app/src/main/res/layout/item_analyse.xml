@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/bg_analyse">
+    <TextView
+        android:id="@+id/tvAnalyseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        tools:text="ПЦР-тест на определение РНК коронавируса стандартный"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2 дня"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvAnalyseName"
+        app:layout_constraintTop_toBottomOf="@id/tvAnalyseName"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:text="8000 $"
+        android:text="@string/count"
+        app:layout_constraintStart_toStartOf="@id/tvTime"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Добавить"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/blue"
+            android:paddingVertical="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="20dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.card.CardFragment">
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Пропустить"
+        android:textColor="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCreatePassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Создание карты пациента"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvSkip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Без карты пациента вы не сможете заказать анализы.\n\nВ картах пациентов будут храниться результаты анализов вас и ваших близких."
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCreatePassword"
+        app:layout_constraintTop_toBottomOf="@id/tvCreatePassword" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_field"
+        android:hint="Имя"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <EditText
+        android:id="@+id/etSecondName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Отчество"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Фамилия"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etSecondName"
+        app:layout_constraintStart_toStartOf="@id/etSecondName"
+        app:layout_constraintTop_toBottomOf="@id/etSecondName" />
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Дата рождения"
+        android:inputType="date"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etSurname"
+        app:layout_constraintStart_toStartOf="@id/etSurname"
+        app:layout_constraintTop_toBottomOf="@id/etSurname" />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/spGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Пол"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/etBirthday"
+        app:layout_constraintStart_toStartOf="@id/etBirthday"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday"
+        app:spinner_item_array="@array/genders" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/bg_button"
+        android:enabled="false"
+        android:paddingVertical="16dp"
+        android:text="Создать"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

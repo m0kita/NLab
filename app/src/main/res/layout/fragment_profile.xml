@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Карта пациента"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_camera"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="40dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvDescription1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Без карты пациента вы не сможете заказать анализы."
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCamera" />
+
+    <TextView
+        android:id="@+id/tvDescription2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="В картах пациентов будут храниться результаты анализов вас и ваших близких."
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription1" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_field"
+        android:hint="Имя"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription2" />
+
+    <EditText
+        android:id="@+id/etSecondName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Отчество"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Фамилия"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etSecondName"
+        app:layout_constraintStart_toStartOf="@id/etSecondName"
+        app:layout_constraintTop_toBottomOf="@id/etSecondName" />
+
+    <EditText
+        android:id="@+id/etBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Дата рождения"
+        android:inputType="date"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/etSurname"
+        app:layout_constraintStart_toStartOf="@id/etSurname"
+        app:layout_constraintTop_toBottomOf="@id/etSurname" />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/spGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_field"
+        android:hint="Пол"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/etBirthday"
+        app:layout_constraintStart_toStartOf="@id/etBirthday"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday"
+        app:spinner_item_array="@array/genders" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/bg_button"
+        android:paddingVertical="16dp"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

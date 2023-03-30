@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/analysesFragment">
+
+    <fragment
+        android:id="@+id/analysesFragment"
+        android:name="com.example.smartlab.ui.analyses.AnalysesFragment"
+        android:label="fragment_analyses"
+        tools:layout="@layout/fragment_analyses" >
+        <action
+            android:id="@+id/action_analysesFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+        <action
+            android:id="@+id/action_analysesFragment_to_resultsFragment2"
+            app:destination="@id/resultsFragment" />
+        <action
+            android:id="@+id/action_analysesFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_analysesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_analysesFragment_to_trashFragment"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_analysesFragment_to_trashFragment2"
+            app:destination="@id/trashFragment" />
+        <argument
+            android:name="bool"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.smartlab.ui.results.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_resultsFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_resultsFragment_to_analysesFragment"
+            app:destination="@id/analysesFragment" />
+        <action
+            android:id="@+id/action_resultsFragment_to_analysesFragment2"
+            app:destination="@id/analysesFragment" />
+        <action
+            android:id="@+id/action_resultsFragment_to_supportFragment2"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_resultsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.smartlab.ui.support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" >
+        <action
+            android:id="@+id/action_supportFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_resultsFragment2"
+            app:destination="@id/resultsFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_analysesFragment"
+            app:destination="@id/analysesFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smartlab.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_supportFragment2"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_analysesFragment"
+            app:destination="@id/analysesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.example.smartlab.ui.analyses.trash.TrashFragment"
+        android:label="fragment_trash"
+        tools:layout="@layout/fragment_trash">
+        <argument
+            android:name="names"
+            app:argType="string" />
+        <argument
+            android:name="prices"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_trashFragment_to_analysesFragment"
+            app:destination="@id/analysesFragment" />
+        <argument
+            android:name="allPrice"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SmartLab</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="timer">Отправить код повторно можно будет через %1$s секунд</string>
+    <string name="count">%1$s ₽</string>
+    <string name="add_by">Добавить за %1$s ₽</string>
+    <string name="pacient">%1$s пациент</string>
+    <string-array name="genders">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+</resources>
