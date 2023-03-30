@@ -29,11 +29,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedPrefs.edit().putString("NAME", navArgs.name).apply()
-        sharedPrefs.edit().putString("SURNAME", navArgs.surname).apply()
-        sharedPrefs.edit().putString("SECONDNAME", navArgs.secondName).apply()
-        sharedPrefs.edit().putString("BITHDATE", navArgs.birthDate).apply()
-        sharedPrefs.edit().putString("GENDER", navArgs.gender).apply()
+        if (navArgs.name != "") {
+            sharedPrefs.edit().putString("NAME", navArgs.name).apply()
+            sharedPrefs.edit().putString("SURNAME", navArgs.surname).apply()
+            sharedPrefs.edit().putString("SECONDNAME", navArgs.secondName).apply()
+            sharedPrefs.edit().putString("BITHDATE", navArgs.birthDate).apply()
+            sharedPrefs.edit().putString("GENDER", navArgs.gender).apply()
+        }
+
         val navHostFragment =
             childFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.findNavController()
